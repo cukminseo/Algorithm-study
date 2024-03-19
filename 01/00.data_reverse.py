@@ -1,7 +1,12 @@
-data = [i for i in range(1,7)]
-howmany = len(data)
+'''
+data.reverse() 구현
+'''
 
-for i in range(howmany):
-    data[i], data[howmany-i] = data[howmany-i], data[i]
+
+data = [i for i in range(1,7)]
+data_len = len(data)
+
+for i in range(data_len):
+    data[i], data[data_len-i] = data[data_len-i], data[i]
 
 print(data)

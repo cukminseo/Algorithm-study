@@ -3,14 +3,14 @@
 백준 추천문제 : 11005
 '''
 
-decimal = 30
+decimal = 15
 remainder = decimal
-
-while not(remainder == 1 or remainder == 0):
+result = 0
+cnt_iter = 0
+while remainder != 0:
     each_point = remainder % 2
     remainder = remainder // 2
-    result = str(each_point) + result
-
-result += remainder
+    result += each_point * (10**cnt_iter)
+    cnt_iter += 1
 
 print(result)
