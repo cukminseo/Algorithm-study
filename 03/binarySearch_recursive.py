@@ -1,6 +1,6 @@
 '''
 Created by: minseo
-Date: 3/20/24
+Date: 3/27/24
 Desc : 
 Excute time : ms(time.perf_counter())
 '''
@@ -9,20 +9,15 @@ import time
 # 측정 시작
 start_time = time.perf_counter()
 
+def binarySearch(data, key, start = 0):
+    end = len(data) - 1
+    mid = (start + end) // 2
+    if data[mid] == data:
+
+
 data = [2, 4, 7, 9, 11, 19, 23]
 key = 19
-
-start = 0
-end = len(data) - 1
-while start <= end:
-    mid = (start + end) // 2
-    if data[mid] == key:
-        print("find")
-        break
-    elif data[mid] > key:
-        end = mid - 1
-    else:
-        start = mid + 1
+print(f"position : ")
 
 
 # 측정 종료 시간
