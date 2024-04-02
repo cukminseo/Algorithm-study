@@ -10,13 +10,13 @@ import time
 start_time = time.perf_counter()
 
 
-def GetSum(num):
-    if num == 1:
+def fibo(n):
+    if n == 0 or n == 1:
         return 1
-    return num + GetSum(num - 1)
+    return fibo(n - 1) + fibo(n - 2)
 
 
-print(GetSum(6))
+print(fibo(10))
 
 # 측정 종료 시간
 end_time = time.perf_counter()
