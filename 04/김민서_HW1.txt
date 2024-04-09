@@ -1,0 +1,36 @@
+'''
+Created by: minseo
+Date: 4/5/24
+Desc :
+Excute time : ms(time.perf_counter())
+'''
+pare = {'>': '<', ')': '(', ']': '[', '}': '{'}
+
+for i in range(1, 11):
+
+    #입력
+    cnt = int(input())
+    data = input()
+
+    stack = []
+    ans = 0
+    isCorrect = True
+
+    # while data:
+    #     now = data.pop(0)
+    for now in data:
+        # 여는 괄호 라면
+        if now in pare.values():
+            stack.append(now)
+        else:
+            if not stack or stack[-1] != pare[now]:
+                isCorrect = False
+                break
+            stack.pop()
+
+    print(f"#{i}", end=" ")
+    if not stack and isCorrect:
+        print('1')
+    else:
+        print('0')
+
