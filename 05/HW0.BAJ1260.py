@@ -2,7 +2,7 @@
 Created by: minseo
 Date: 4/11/24
 Desc : 백준 BFS, DFS 초보자 필수
-Excute time : 0.0451000(time.perf_counter())
+Excute time : 588ms(백준)
 '''
 
 import sys

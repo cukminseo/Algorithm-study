@@ -4,12 +4,12 @@ Date: 4/14/24
 Desc : 백준 1325
 Excute time : 84ms(백준)
 '''
-import time
-
-# 측정 시작
-start_time = time.perf_counter()
-
-import sys
+# import time
+#
+# # 측정 시작
+# start_time = time.perf_counter()
+#
+# import sys
 from collections import deque
 
 
@@ -28,7 +28,7 @@ def BFS():
                 visited[next_y][next_x] = True
 
 
-sys.stdin = open("BAJ1325.txt")
+# sys.stdin = open("BAJ1325.txt")
 length, width = map(int, input().split())
 
 # 그래프 생성
@@ -50,7 +50,7 @@ myQueue.append((0, 0))
 BFS()
 print(distance[length - 1][width - 1])
 
-# 측정 종료 시간
-end_time = time.perf_counter()
-# 실행 시간 출력
-print(f"실행 싯간: {(end_time - start_time) * 1000:.7f} milliseconds")
+# # 측정 종료 시간
+# end_time = time.perf_counter()
+# # 실행 시간 출력
+# print(f"실행 싯간: {(end_time - start_time) * 1000:.7f} milliseconds")
