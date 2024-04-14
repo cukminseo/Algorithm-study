@@ -11,7 +11,7 @@ from collections import deque
 start_time = time.perf_counter()
 import sys
 
-sys.stdin = open('BFS.txt', 'r')
+sys.stdin = open('05.BFS.txt', 'r')
 
 def BFS():
     while myQueue:

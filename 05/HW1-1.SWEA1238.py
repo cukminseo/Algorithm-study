@@ -12,7 +12,7 @@ from collections import deque
 # 측정 시작
 start_time = time.perf_counter()
 
-sys.stdin = open("SWEA1238.txt", "r")
+sys.stdin = open("HW1-1.SWEA1238.txt", "r")
 
 
 def BFS():

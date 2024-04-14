@@ -1,7 +1,7 @@
 '''
 Created by: minseo
 Date: 4/14/24
-Desc : 백준 1325
+Desc : 백준 2178
 Excute time : 84ms(백준)
 '''
 import time
@@ -28,7 +28,7 @@ def BFS():
                 visited[next_y][next_x] = True
 
 
-sys.stdin = open("BAJ1325.txt")
+sys.stdin = open("BAJ2178.txt")
 length, width = map(int, input().split())
 
 # 그래프 생성
