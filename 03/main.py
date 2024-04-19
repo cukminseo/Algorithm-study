@@ -1,17 +1,10 @@
-'''
-Created by: minseo
-Date: 3/27/24
-Desc : 
-Excute time : ms(time.perf_counter())
-'''
-import time
-
-# 측정 시작
-start_time = time.perf_counter()
-
-print()
-
-# 측정 종료 시간
-end_time = time.perf_counter()
-# 실행 시간 출력
-print(f"실행 싯간: {(end_time - start_time) * 1000:.7f} milliseconds")
+num = 62
+MyList = []
+MyList.append(100)
+MyList.append(num)
+while True:
+    MyList.append(MyList[-2]-MyList[-1])
+    if MyList[-1] < 0 : break
+    for now in MyList:
+        print(now, end = ' ')
+    print()
