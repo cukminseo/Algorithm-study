@@ -21,7 +21,7 @@ def make_pi():
             PI[j + 1] = PI[j] + 1
             i += 1
             j += 1
-        elif pattern[j] == pattern[0]:  # 0번째랑은 같dma
+        elif pattern[j] == pattern[0]:  # 0번째랑은 같음
             PI[j + 1] = 1
             i = 1
             j += 1

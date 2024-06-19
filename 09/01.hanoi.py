@@ -5,5 +5,5 @@ def solve_towers(n,_from, _to, _spare):
         solve_towers(n-1,_spare, _to, _from)
 
 
-n =3
+n = 6
 solve_towers(n, 'from', 'to', 'spare')

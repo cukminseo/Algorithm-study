@@ -1,24 +1,16 @@
 '''
 Created by: minseo
-Date: 4/10/24
+Date: 3/13/24
 Desc : 
-Excute time : ms(time.perf_counter())
 '''
 import time
 
 # 측정 시작
 start_time = time.perf_counter()
 
-Queue = []
-
-for now in range(1, 4):
-    Queue.append(now)
-
-while Queue:
-    print(Queue.pop(0))
-
-
-
+for i in range(10):
+    if i & 1 == 0:
+        print(i)
 # 측정 종료 시간
 end_time = time.perf_counter()
 # 실행 시간 출력

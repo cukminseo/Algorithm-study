@@ -1,6 +1,6 @@
 '''
 Created by: minseo
-Date: 4/17/24
+Date: 4/10/24
 Desc : 
 Excute time : ms(time.perf_counter())
 '''
@@ -9,7 +9,15 @@ import time
 # 측정 시작
 start_time = time.perf_counter()
 
-print()
+Queue = []
+
+for now in range(1, 4):
+    Queue.append(now)
+
+while Queue:
+    print(Queue.pop(0))
+
+
 
 # 측정 종료 시간
 end_time = time.perf_counter()

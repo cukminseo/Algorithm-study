@@ -13,28 +13,27 @@ start_time = time.perf_counter()
 import sys
 
 
-def binary_search_recursive(query: int, data: list, start:int = 0, end:int = -1) -> int:
+def binary_search(query: int, data: list) -> int:
     """
     이분검색을 통한 리스트 검색
     :param query: 질의할 숫자
     :param data: 검색될 데이터
     :return: 1 or 0(int)
     """
-    if end == -1:
-        end = len(data)
-    if start >= end:
-        return 0
-    mid = (start + end) // 2
-    if query == data[mid]:
-        return 1
-    elif query > data[mid]:
-        return binary_search_recursive(query, data, mid + 1, end)
-    else:
-        return binary_search_recursive(query, data, start, mid)
+    start = 0
+    end = len(data) - 1
+    while start <= end:
+        mid = (start + end) // 2
+        if query == data[mid]:
+            return 1
+        elif query > data[mid]:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return 0
 
 
-
-sys.stdin = open('03//BAJ1920.txt', 'r')
+sys.stdin = open('BAJ1920.txt', 'r')
 # 데이터 갯수
 data_len = int(input())
 # 데이터 리스트(sort)
@@ -45,7 +44,7 @@ query_len = int(input())
 query_num_list = list(map(int, input().split()))
 
 for each_query in query_num_list:
-    print(binary_search_recursive(each_query, data_num_list))
+    print(binary_search(each_query, data_num_list))
 
 # 측정 종료 시간
 end_time = time.perf_counter()
